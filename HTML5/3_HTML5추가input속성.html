@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML5에서 추가된 input속성</h1>
+    <form action="3-1서버측 파일.html" autocomplete="on" id="form1" >
+        <input type="text" name="name" value="미리적힌값"> 태그뒤에뒤에적힌값 <br><br>
+        <input type="text" name="auto" autofocus> 오토포커스입니다<br><br>
+        <input list="food" name="food"> list속성 중 option입니다
+            <datalist id="food">
+                <option value="한식"></option>
+                <option value="양식"></option>
+            </datalist> <br><br>
+        <input type="file" value="파일" multiple> multiple을 쓰면 파일 여러개 선택가능 <br><br>
+        <input type="text" pattern="[a-z]">문자열에서 특정한 규칙을 가지는 문자열의 집합을 찾아내기 위한 검색 패턴 <br><br>
+        <input type="text" placeholder="힌트">   input 요소에 입력되어야 할 값에 대한 힌트를 제공 (value값 아님)<br><br>
+        <input type="text" required> 반드시 값이 입력되어야함 <br><br>
+        <input type="number" name="favnum" min="-30" max="30" step="5"> -30부터 30사이에 5단위 간격으로 입력가능<br><br>
+
+        <input type="image" src="../HTML기초/img/naver.png" alt="전송" height="100" width="200"> <br><br>
+        <!--src에서 ../를 쓰면 외부 폴더로 이동가능-->
+        <input type="submit" value="버튼" formaction="3-2다른서버측 파일.html" 
+            formenctype="application/x-www-form-urlencoded"> <br><br> 
+        <!--formaction:기본 저장되어있는 서버로 데이터를 전송 하는 것이 아니라 지정한 
+        서버로 데이터를 전송할 수 있는 요소로 submit,image타입에서만 사용가능
+    
+        데이터 전송 서버를 기본적으로 저장하기 위해서는 윗쪽 <form action="">에 지정을 해줘야함-->
+        
+    </form>
+    <input type="text" form="form1"> form밖에서도 form을 작성할 수 있고 다른 폼과 연결가능 <br><br> 
+</body>
+</html>

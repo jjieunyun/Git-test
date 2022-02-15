@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200" 
+    style="border: 3px solid lightskyblue;">
+    </canvas>
+
+    <script>
+        let paper = document.getElementById("myCanvas");
+        let context = paper.getContext("2d");
+
+        let grdline = context.createLinearGradient(0,0,50,150);
+        grdline.addColorStop(0,"blue");
+        grdline.addColorStop(1,"white");
+        context.fillStyle = grdline;
+        context.fillRect(10,10,150,100);
+
+        context.font = "30px Arial";
+        context.fillStyle ="white"
+        context.fillText("CANVAS", 15,50);
+
+        let grdtext = context.createLinearGradient(0, 0, 200, 0);
+		grdtext.addColorStop(0, "yellow");
+		grdtext.addColorStop(1, "#F361DC");
+
+        context.fillStyle = grdtext;
+		context.font = "30px Arial";
+		context.fillText("CANVAS", 15, 75);
+
+        console.log(paper);
+    </script>
+</body>
+</html>

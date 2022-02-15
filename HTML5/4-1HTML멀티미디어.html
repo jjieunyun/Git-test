@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML 멀티미디어 확인</h1>
+    <object data="../HTML5/src/Pdf확인용.pdf" style="width: 500px; height:600px;"></object><br><br>
+    <object data="../HTML기초/img/naver.png"></object> object는 data로 주소를 가져옴 <br><br>
+    <embed src="../HTML기초/img/naver.png"></embed> embed는 src로 주소를 가져져옴 <br><br>
+
+    <h1>유튜브 들고오기</h1>
+    <iframe width="869" height="489" src="https://www.youtube.com/embed/Gdpdgo801o4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h1>유튜브 소스코드 해석</h1>
+    <iframe width="869" height="489" src="https://www.youtube.com/embed/Gdpdgo801o4?autoplay=1&mute=1&control=0"></iframe> 
+    <P>
+        src주소 끝에 ?넣고 나머지 옵션은 &으로 구분함 <br>
+        autoplay는 mute(음소거)된 상태에서 가능하다<br>
+        값이 1일때 true, 0일때 false이다. <br>
+        loop는 무한반복<br>
+        control은 제어가 가능한 상태.<br>
+    </P>
+</body>
+</html>

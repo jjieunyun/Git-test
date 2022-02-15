@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Style display가 블록인 경우</h3></h1>
+    <p style="border:3px solid black;">p태그에 스타일을 걸면 화면끝까지 색이 입혀집니다. 화면사이즈를 변경하면 그 크기만큼 크기가 변경됨</p>
+    <div style="border: 2px solid blue; color:orangered; font-weight: bold;">
+        <p>div안의 태그입니다</p>
+            <ul>
+                <li>리스트입니다</li>
+                <li>리스트입니다</li>
+                <li>리스트입니다</li>
+            </ul>
+    </div>
+    <ol>
+        <li>div밖의 리스트입니다</li>
+        <li>div밖의 리스트입니다</li>
+        <li>div밖의 리스트입니다</li>
+    </ol>
+
+    <h3>style의 display가 인라인인경우</h3>
+    <p style="display:inline; border:3px solid black">강제로 인라인으로 바꾸기</p>
+    <img src="./img/naver.png" alt="네이버로고" style="border: 3px solid red; display: block;">
+    <a href="html요소실습.html" style="border:3px dashed green;">html실습내용</a>
+    <p>
+        인라인인경우 자동 줄바꿈이 되지 않습니다.<br>
+        요소의 컨텐츠의 크기만큼 공간을 차지하고 있기 때문입니다.<br>
+        style의 display값을 block으로 바꿔주면 새로운 줄에서 시작하고 한 줄을 다 차지함.
+    </p>
+
+    <h3>iframe을 이용한 페이지 삽입</h3>
+    <iframe src="텍스트확인.html" name="show" style="width: 100%; height: 400px;"></iframe>
+    <a href="텍스트실습.html" target="show">페이지를 이동합니다</a>
+    <a href="텍스트확인.html" target="show">원래페이지로 이동합니다</a>
+
+    
+</body>
+</html>

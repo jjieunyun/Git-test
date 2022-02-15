@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Canvas확인하기</h1>
+    <img id="naver" src="../HTML기초/img/naver.png" alt="네이버"><br>
+    <canvas id="myCanvas" width="300" height="500" 
+            style="border: 3px solid black;">
+    </canvas>
+    <p><button onclick="drawImage()">이미지 그리기</button></p>
+
+    <h1>SVG확인하기</h1>
+
+    <svg width="300" height="200">
+    <line x1="50" y1="0" x2="100" y2="350" 
+            stroke = "orange" strocke-width="5"></line>
+    </svg>
+
+    <script>
+        let paper = document.getElementById("myCanvas");
+        let context = paper.getContext("2d");
+
+        context.strokeRect(10, 10, 250, 130);
+        context.fillStyle = "#ff0000";
+        context.fillRect(0,0,150,75);
+        
+
+        /*원은 그리기전에 패스를 초기화한다*/
+		context.beginPath();
+		context.arc(150, 100, 10, 0, 2 * Math.PI);
+      	context.fill();
+      	context.strokeStyle = "#ffff00"
+        context.stroke();
+        /*패스를 지정한 후에 선을 그린다*/
+
+        context.moveTo(0,0); //시작점
+        context.lineTo(100,75); //끝점
+        context.stroke(); //그려준다
+
+        context.font = "30px Arial";
+        context.fillStyle ="#0000ff"
+        context.fillText("CANVAS", 15,50);
+        //filltext는 작성할 내용과 x(시작위치),y(문자의 바닥)에서부터 시작한다.
+
+        //그래디언트 종류 : 선형, 원형
+        let grd = context.createRadialGradient(0, 100, 5 ,75, 200, 100);
+        //Radial : 원형그라디언트( 시작원의 x,y중심점,반지름,끝나는원의x,y중심정,반지름)
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+        context.fillStyle = grd;
+        context.fillRect(0,100,150,50);
+
+        let grdline = context.createLinearGradient(0,200,150,200);
+        //Linear : 선형그라디언트(x시작위치, y시작위치,x끝,y끝)
+        grdline.addColorStop(0,"blue");
+        grdline.addColorStop(1,"yellow");
+        context.fillStyle = grdline;
+        context.fillRect(0,100,150,50);
+
+        context.strokeStyle = grdline;
+        context.rect(0,80,150,15);
+        context.stroke();
+
+        function drawImage() {
+			let paper = document.getElementById("myCanvas");
+			let context = paper.getContext("2d");
+            let picture = document.getElementById("naver");
+            context.drawImage(picture, 10, 250);
+        }
+
+        console.log(paper);
+    </script>
+    <!-- colsole.log를 이용해서 자바스크립트 변경사항을 확인할 수 있음. 
+    자바스크립트는 바로 확인이 어려움-->
+
+</body>
+</html>
